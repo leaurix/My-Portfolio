@@ -1,6 +1,10 @@
 # Louis Yvan Alcayde: Portfolio
 
-Personal portfolio site. One file (`index.html`) with HTML, CSS and a small amount of JavaScript inline. No build step.
+Personal portfolio site. Plain HTML, CSS and JavaScript, no build step.
+
+- `index.html`: page content
+- `styles.css`: all styling
+- `script.js`: board, greeting, copy-email and theme toggle
 
 ## Preview locally
 
@@ -8,9 +12,9 @@ Open `index.html` in any browser.
 
 ## Editing
 
-- **Skills board:** edit the `PARTS` object near the bottom of `index.html` (title, description, skill chips, "Used in" links).
+- **Skills board:** edit the `PARTS` object at the top of `script.js` (title, description, skill chips, "Used in" links).
 - **Experience / Education:** plain HTML in the `#experience` and `#education` sections.
-- **Colours and fonts:** CSS variables in `:root` at the top of the `<style>` block. Dark mode values sit just below.
+- **Colours and fonts:** CSS variables in `:root` at the top of `styles.css`. Dark mode values sit just below.
 
 ## Features
 
