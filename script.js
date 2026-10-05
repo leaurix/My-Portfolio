@@ -71,7 +71,7 @@
     });
   }
 
-  /* ---------- Board selection (deep link: #skills-hw etc.) ---------- */
+  /* ---------- Board selection ---------- */
   var tabs = document.getElementById("partTabs");
   ORDER.forEach(function (id) {
     var li = document.createElement("li");

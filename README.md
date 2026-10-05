@@ -5,7 +5,7 @@ Personal portfolio site. Plain HTML, CSS and JavaScript, no build step.
 - `index.html`: page content
 - `styles.css`: all styling
 - `script.js`: all interactive features
-- `resume.pdf`: downloadable resume (replace this file to update it)
+- `resume.pdf`: downloadable resume 
 
 ## Preview locally
 
