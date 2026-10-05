@@ -192,10 +192,6 @@ section.block { padding: 72px 0; border-top: 1.5px solid var(--line); }
 .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
 .contact-list li { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-size: 1.15rem; }
 .contact-list .k { font-size: .9rem; color: rgba(243, 246, 240, .7); min-width: 72px; }
-.copy-btn {
-  font: 700 .85rem var(--body); background: var(--copper-hi); color: #13231C; border: 0;
-  border-radius: 6px; padding: 6px 12px; cursor: pointer;
-}
 .site-foot { padding: 28px 0; font-size: .9rem; color: var(--muted); }
 
 /* ===== Responsive ===== */
@@ -273,7 +269,7 @@ section[id] { scroll-margin-top: 80px; }
 
 @media (prefers-reduced-motion: reduce) { .gantt div { animation: none; } }
 @media print {
-  .site-head, .progress, .board-hint, .part-tabs, .sched, .filter, .msg, .theme-btn, .copy-btn, .lang, .skip { display: none !important; }
+  .site-head, .progress, .board-hint, .part-tabs, .sched, .filter, .msg, .theme-btn, .lang, .skip { display: none !important; }
   body { background: #fff; color: #000; }
   .contact { background: #fff; color: #000; }
   .contact a, .contact .intro, .langs em { color: #000; }

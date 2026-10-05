@@ -220,15 +220,6 @@
     langBtns.appendChild(b);
   });
 
-  /* ---------- Copy email ---------- */
-  var email = document.getElementById("email").textContent;
-  var copyBtn = document.getElementById("copyBtn");
-  copyBtn.addEventListener("click", function () {
-    var done = function () { copyBtn.textContent = "Copied"; setTimeout(function () { copyBtn.textContent = "Copy email"; }, 1800); };
-    if (navigator.clipboard) navigator.clipboard.writeText(email).then(done, function () { location.href = "mailto:" + email; });
-    else location.href = "mailto:" + email;
-  });
-
   /* ---------- Message form (opens the visitor's email app) ---------- */
   document.getElementById("msgForm").addEventListener("submit", function (e) {
     e.preventDefault();
