@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Louis Yvan Alcayde</title>
-<meta name="description" content="Portfolio of Louis Yvan Alcayde, IT specialist in Batangas, Philippines: hardware repair, database administration, website design and software testing.">
+<meta name="description" content="Portfolio of Louis Yvan Alcayde, Computer Science graduate in Batangas, Philippines: software QA, data validation, databases, websites and hardware diagnostics.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Louis Yvan Alcayde">
+<meta property="og:description" content="Computer Science graduate: software QA, data validation, databases, websites and hardware diagnostics.">
+<meta name="theme-color" content="#0E5A43">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E5A43'/%3E%3Crect x='9' y='9' width='14' height='14' rx='2' fill='%231B1F1D'/%3E%3Cpath d='M12 5v4M16 5v4M20 5v4M12 23v4M16 23v4M20 23v4M5 12h4M5 16h4M5 20h4M23 12h4M23 16h4M23 20h4' stroke='%23C47F38' stroke-width='2'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,8 +17,9 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
 
-<header class="site-head">
+<header class="site-head" id="siteHead">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Louis Yvan Alcayde, home">
       <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#0E5A43"/><rect x="9" y="9" width="14" height="14" rx="2" fill="#1B1F1D"/><path d="M12 5v4M16 5v4M20 5v4M12 23v4M16 23v4M20 23v4M5 12h4M5 16h4M5 20h4M23 12h4M23 16h4M23 20h4" stroke="#C47F38" stroke-width="2"/></svg>
@@ -23,6 +28,7 @@
     <nav class="nav" aria-label="Main">
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
       <a href="#contact">Contact</a>
       <button class="theme-btn" id="themeBtn" type="button">Dark mode</button>
@@ -36,21 +42,20 @@
     <div class="wrap">
       <div>
         <h1><span>Louis Yvan</span><span>Alcayde</span></h1>
-        <p class="lede">IT specialist in Batangas. I repair hardware down to the board, look after databases, design websites, and test software until it breaks.</p>
+        <p class="lede">Computer Science graduate from Batangas. I test software until it breaks, keep data accurate, build websites and databases, and repair hardware down to the board.</p>
         <dl class="facts">
           <div><dt>Based in</dt><dd>Bauan, Batangas</dd></div>
           <div><dt>Freelancing since</dt><dd>2018</dd></div>
-          <div><dt>Degree</dt><dd>BS Computer Science</dd></div>
+          <div><dt>BS Computer Science</dt><dd>Class of 2026</dd></div>
         </dl>
         <div class="actions">
           <a class="btn btn-solid" href="#contact">Get in touch</a>
-          <a class="btn btn-line" href="#experience">See experience</a>
+          <a class="btn btn-line" href="resume.pdf" download="Louis_Yvan_Alcayde_Resume.pdf">Download resume</a>
         </div>
       </div>
 
       <div class="board-area" id="skills">
         <p class="board-hint">Each part on this board is one area of my work. Select a part to see the skills behind it.</p>
-
         <svg class="board-svg" id="board" viewBox="0 0 640 440" role="img" aria-labelledby="boardTitle">
           <title id="boardTitle">Circuit board diagram of Louis's skill areas</title>
           <!-- board -->
@@ -154,9 +159,7 @@
           <text class="silk" x="346" y="401" font-size="13">D1 open to work</text>
           <text class="silk" x="58" y="34" font-size="13" fill-opacity=".7">LYA-01 REV 2026</text>
         </svg>
-
         <ul class="part-tabs" id="partTabs" aria-label="Skill areas"></ul>
-
         <div class="panel" id="panel" aria-live="polite">
           <div class="panel-head"><span class="ref" id="pRef"></span><h2 id="pTitle"></h2></div>
           <p id="pDesc"></p>
@@ -172,7 +175,7 @@
     <div class="wrap block-head">
       <div>
         <h2 class="title">Experience</h2>
-        <p class="intro">Eight years of hands-on IT work, from repair benches to test builds to business reports.</p>
+        <p class="intro">Eight years of hands-on IT work, from repair benches to pre-release game builds to business reports.</p>
       </div>
       <ol class="timeline">
         <li class="job" id="exp-freelance">
@@ -182,10 +185,8 @@
           <details open>
             <summary>What I do</summary>
             <ul>
-              <li>Provide database administration and website design services for clients.</li>
-              <li>Diagnose and resolve system unit hardware and software issues.</li>
-              <li>Perform PC hardware replacements and upgrades.</li>
-              <li>Repair and replace computer peripheral PCBs and internal components.</li>
+              <li>Design, deploy and maintain responsive websites and database systems for client projects.</li>
+              <li>Diagnose and resolve hardware, OS and software issues; perform component upgrades and PCB repair.</li>
             </ul>
           </details>
         </li>
@@ -196,12 +197,9 @@
           <details>
             <summary>What I did</summary>
             <ul>
-              <li>Analyzed business process data to identify quality gaps and improvement opportunities.</li>
-              <li>Assisted in creating and maintaining quality metrics, dashboards, and performance reports.</li>
-              <li>Conducted data validation and accuracy checks across operational reports.</li>
-              <li>Collaborated with cross-functional teams to review process compliance and standards.</li>
-              <li>Prepared summary reports and presented insights to senior analysts and stakeholders.</li>
-              <li>Helped update standard operating procedures (SOPs) based on quality review outcomes.</li>
+              <li>Analyzed business process data to identify quality gaps, bottlenecks and efficiency opportunities.</li>
+              <li>Built quality metrics dashboards and validated accuracy across high-volume operational reports.</li>
+              <li>Reviewed process compliance and helped update SOPs based on quality review findings.</li>
             </ul>
           </details>
         </li>
@@ -212,20 +210,8 @@
           <details>
             <summary>What I did</summary>
             <ul>
-              <li>Executed functional, regression, and exploratory testing across multiple game builds.</li>
-              <li>Identified, documented, and tracked bugs using internal reporting tools.</li>
-            </ul>
-          </details>
-        </li>
-        <li class="job" id="exp-agp">
-          <div class="when">Mar 2019 – May 2019</div>
-          <h3>Work Immersion</h3>
-          <p class="org">Atlantic, Gulf &amp; Pacific Company (AG&amp;P)</p>
-          <details>
-            <summary>What I did</summary>
-            <ul>
-              <li>Assisted in database administration tasks, including data organization, updates, and basic maintenance.</li>
-              <li>Performed data validation and basic testing to ensure system accuracy and reliability.</li>
+              <li>Executed functional, regression and exploratory testing on pre-release game builds.</li>
+              <li>Documented and tracked bugs and UI defects with clear reproduction steps for developers.</li>
             </ul>
           </details>
         </li>
@@ -233,16 +219,71 @@
     </div>
   </section>
 
+  <!-- ===== Projects ===== -->
+  <section class="block" id="projects">
+    <div class="wrap block-head">
+      <div>
+        <h2 class="title">Projects</h2>
+        <p class="intro">My thesis, plus team projects where I worked as developer, artist and tester.</p>
+      </div>
+      <div>
+        <article class="thesis" id="proj-thesis">
+          <p class="thesis-role">Lead Developer, Academic Thesis</p>
+          <h3>Prototype Hybrid Scheduler</h3>
+          <p>A hybrid CPU scheduling algorithm, tested with comparative simulations of execution time, resource allocation and task prioritization.</p>
+          <p class="tags"><span>Algorithms</span><span>Operating systems</span><span>Simulation</span></p>
+          <a class="btn btn-solid" href="https://github.com/leaurix/PrototypeHybridScheduler" target="_blank" rel="noopener">View on GitHub</a>
+
+          <div class="sched" id="sched">
+            <h4>Try it: why scheduling order matters</h4>
+            <p class="sched-note">Four tasks arrive at the same time. Change their run times, then pick a classic algorithm to see the order the CPU runs them and how long tasks wait on average.</p>
+            <div class="sched-inputs" id="schedInputs"></div>
+            <div class="sched-algos" id="schedAlgos" role="group" aria-label="Scheduling algorithm"></div>
+            <div class="gantt" id="gantt" aria-live="polite"></div>
+            <div class="gantt-axis" id="ganttAxis"></div>
+            <p class="sched-result" id="schedResult"></p>
+          </div>
+        </article>
+
+        <div class="filter" id="projFilter" role="group" aria-label="Filter projects"></div>
+        <ul class="projects" id="projList">
+          <li data-tags="Python Game Firebase">
+            <h3>Dumpster Dash</h3>
+            <p>2D waste-sorting game with a real-time Firebase leaderboard.</p>
+            <p class="tags"><span>Python</span><span>Pygame</span><span>Firebase</span></p>
+          </li>
+          <li data-tags="Python App">
+            <h3>tuTok!</h3>
+            <p>App for filing, tracking and managing student bullying reports anonymously.</p>
+            <p class="tags"><span>Python</span><span>OOP</span></p>
+          </li>
+          <li data-tags="Systems">
+            <h3>ALUSim</h3>
+            <p>ALU simulator modelling binary operations, control logic and CPU instruction cycles.</p>
+            <p class="tags"><span>Computer architecture</span><span>Simulation</span></p>
+          </li>
+          <li data-tags="App">
+            <h3>TrackIt</h3>
+            <p>Tracking app: I worked on application logic, features and UI integration.</p>
+            <p class="tags"><span>App logic</span><span>UI integration</span></p>
+          </li>
+          <li data-tags="App QA">
+            <h3>ProTomo</h3>
+            <p>Module development, code reviews, data validation and feature testing.</p>
+            <p class="tags"><span>Code review</span><span>Testing</span><span>Data validation</span></p>
+          </li>
+        </ul>
+        <p class="more"><a href="https://github.com/leaurix" target="_blank" rel="noopener">More on github.com/leaurix</a></p>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== Education ===== -->
   <section class="block" id="education">
     <div class="wrap block-head">
-      <div>
-        <h2 class="title">Education</h2>
-      </div>
+      <div><h2 class="title">Education</h2></div>
       <ul class="edu">
-        <li id="edu-bsu"><h3>Bachelor of Science in Computer Science</h3><p>Batangas State University, Alangilan</p></li>
-        <li><h3>Senior High School</h3><p>Lyceum of the Philippines University, Batangas</p></li>
-        <li><h3>Junior High School</h3><p>Sta. Teresa College</p></li>
+        <li id="edu-bsu"><h3>Bachelor of Science in Computer Science</h3><p>Batangas State University, Alangilan. Graduated 2026.</p></li>
       </ul>
     </div>
   </section>
@@ -252,7 +293,12 @@
     <div class="wrap block-head">
       <div>
         <h2 class="title">Contact</h2>
-        <p class="intro">Open to full-time, contract and freelance IT work. I reply in English, Filipino or Russian.</p>
+        <p class="intro">Open to full-time, contract and freelance work in QA, data and IT support.</p>
+        <ul class="langs">
+          <li><span>English</span><span class="meter" style="--lvl:3" aria-label="Fluent"></span><em>Fluent</em></li>
+          <li><span>Filipino</span><span class="meter" style="--lvl:4" aria-label="Native"></span><em>Native</em></li>
+          <li><span>Russian</span><span class="meter" style="--lvl:1" aria-label="Basic"></span><em>Basic</em></li>
+        </ul>
       </div>
       <div>
         <p class="greet" id="greet" lang="en">Hello! Let's work together.</p>
@@ -260,15 +306,29 @@
         <ul class="contact-list">
           <li><span class="k">Email</span><a href="mailto:lyalcayde@gmail.com" id="email">lyalcayde@gmail.com</a><button class="copy-btn" id="copyBtn" type="button">Copy email</button></li>
           <li><span class="k">LinkedIn</span><a href="https://www.linkedin.com/in/LouisAlcayde" target="_blank" rel="noopener">linkedin.com/in/LouisAlcayde</a></li>
-          <li><span class="k">Location</span>Bauan, Batangas, Philippines</li>
+          <li><span class="k">GitHub</span><a href="https://github.com/leaurix" target="_blank" rel="noopener">github.com/leaurix</a></li>
+          <li><span class="k">Resume</span><a href="resume.pdf" download="Louis_Yvan_Alcayde_Resume.pdf">Download PDF</a></li>
         </ul>
+
+        <form class="msg" id="msgForm">
+          <h3>Send a message</h3>
+          <label for="fName">Your name</label>
+          <input id="fName" name="name" required autocomplete="name">
+          <label for="fMsg">Message</label>
+          <textarea id="fMsg" name="message" rows="4" required></textarea>
+          <button class="copy-btn send" type="submit">Open in email app</button>
+          <p class="form-note" id="formNote">This opens your email app with the message ready to send.</p>
+        </form>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="site-foot">
-  <div class="wrap">© <span id="year">2026</span> Louis Yvan Alcayde</div>
+  <div class="wrap foot-row">
+    <span>© <span id="year">2026</span> Louis Yvan Alcayde</span>
+    <a href="#top">Back to top</a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
