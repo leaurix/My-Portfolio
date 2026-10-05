@@ -220,6 +220,9 @@
     langBtns.appendChild(b);
   });
 
+  /* ---------- Email (used by the message form) ---------- */
+  var email = document.getElementById("email").textContent;
+
   /* ---------- Message form (opens the visitor's email app) ---------- */
   document.getElementById("msgForm").addEventListener("submit", function (e) {
     e.preventDefault();

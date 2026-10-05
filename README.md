@@ -23,7 +23,7 @@ Open `index.html` in any browser.
 - Expandable experience timeline; "Used in" links jump to and highlight the matching role or project.
 - Thesis section with a live CPU scheduling demo (FCFS, SJF, Round Robin) and Gantt chart.
 - Project list with filters.
-- Resume download, copy-email button, message form that opens the visitor's email app.
+- Resume download, message form that opens the visitor's email app.
 - Sticky header with active-section highlight and scroll progress bar.
 - Light/dark mode, print-friendly layout, social share tags, responsive, respects reduced motion.
 
