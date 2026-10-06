@@ -38,7 +38,7 @@
       used: [["Freelance IT Specialist", "#exp-freelance"], ["Team projects (artist)", "#projects"]]
     }
   };
-  var ORDER = ["db", "web", "hw", "qa", "code", "media"];
+  var ORDER = ["qa", "db", "web", "code", "hw", "media"];
   var NS = "http://www.w3.org/2000/svg";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -71,7 +71,7 @@
     });
   }
 
-  /* ---------- Board selection ---------- */
+  /* ---------- Board selection (deep link: #skills-hw etc.) ---------- */
   var tabs = document.getElementById("partTabs");
   ORDER.forEach(function (id) {
     var li = document.createElement("li");
@@ -119,7 +119,7 @@
     setTimeout(function () { el.classList.remove("flash"); }, 1600);
   }
   var m = location.hash.match(/^#skills-(\w+)$/);
-  select(m && PARTS[m[1]] ? m[1] : "db", false);
+  select(m && PARTS[m[1]] ? m[1] : "qa", false);
   if (m) document.getElementById("skills").scrollIntoView();
 
   /* ---------- Scheduler demo ---------- */
@@ -223,14 +223,36 @@
   /* ---------- Email (used by the message form) ---------- */
   var email = document.getElementById("email").textContent;
 
-  /* ---------- Message form (opens the visitor's email app) ---------- */
-  document.getElementById("msgForm").addEventListener("submit", function (e) {
+  /* ---------- Message form ----------
+     Paste your Formspree form ID below (from https://formspree.io, e.g. "xyzabcd").
+     Left empty, the form opens the visitor's email app instead. */
+  var FORMSPREE_ID = "";
+  var form = document.getElementById("msgForm");
+  var note = document.getElementById("formNote");
+  var sendBtn = document.getElementById("sendBtn");
+  if (!FORMSPREE_ID) sendBtn.textContent = "Open in email app";
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
-    var name = document.getElementById("fName").value.trim();
-    var msg = document.getElementById("fMsg").value.trim();
-    location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Portfolio enquiry from " + name) +
-      "&body=" + encodeURIComponent(msg + "\n\n" + name);
-    document.getElementById("formNote").textContent = "Your email app should now be open with the message ready.";
+    var name = form.name.value.trim(), from = form.email.value.trim(), msg = form.message.value.trim();
+    if (!name || !msg || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(from)) {
+      note.textContent = "Add your name, a valid email address and a message.";
+      return;
+    }
+    if (!FORMSPREE_ID) {
+      location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Portfolio enquiry from " + name) +
+        "&body=" + encodeURIComponent(msg + "\n\n" + name + "\n" + from);
+      note.textContent = "Your email app should now be open with the message ready.";
+      return;
+    }
+    sendBtn.disabled = true; sendBtn.textContent = "Sending...";
+    fetch("https://formspree.io/f/" + FORMSPREE_ID, {
+      method: "POST", headers: { "Accept": "application/json" }, body: new FormData(form)
+    }).then(function (r) {
+      if (!r.ok) throw new Error();
+      form.reset(); note.textContent = "Message sent. I'll reply to " + from + " soon.";
+    }).catch(function () {
+      note.textContent = "Message not sent. Check your connection and try again, or email " + email + ".";
+    }).then(function () { sendBtn.disabled = false; sendBtn.textContent = "Send message"; });
   });
 
   /* ---------- Sticky header, progress bar, active nav ---------- */
