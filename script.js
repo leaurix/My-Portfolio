@@ -16,20 +16,20 @@
     hw: {
       ref: "R1", tab: "Hardware", title: "Hardware diagnostics & repair",
       desc: "Diagnosing hardware, OS and software faults, then fixing them, from component upgrades down to PCB repair and soldering.",
-      skills: ["Hardware diagnostics", "OS troubleshooting", "Component upgrades", "PCB repair", "Soldering"],
-      used: [["Freelance IT Specialist", "#exp-freelance"]]
+      skills: ["Hardware diagnostics", "OS troubleshooting", "Windows maintenance", "Component upgrades", "PCB repair", "Soldering"],
+      used: [["Freelance IT Specialist", "#exp-freelance"], ["WinPkgScan", "#proj-winpkgscan"]]
     },
     qa: {
       ref: "TP1", tab: "Testing", title: "QA & testing",
       desc: "Finding what is broken, in game builds and in business processes, and writing it up with clear steps so someone can fix it.",
-      skills: ["Functional testing", "Regression testing", "Exploratory testing", "Bug reporting", "Data validation", "Process documentation", "SOP updates"],
-      used: [["IGG Games", "#exp-igg"], ["Sorosoro Ibaba Development Cooperative", "#exp-sorosoro"], ["ProTomo", "#projects"]]
+      skills: ["Functional testing", "Regression testing", "Exploratory testing", "Automated tests (Pester)", "CI (GitHub Actions)", "Bug reporting", "Data validation", "Process documentation", "SOP updates"],
+      used: [["IGG Games", "#exp-igg"], ["Sorosoro Ibaba Development Cooperative", "#exp-sorosoro"], ["WinPkgScan", "#proj-winpkgscan"], ["ProTomo", "#projects"]]
     },
     code: {
       ref: "U2", tab: "Code", title: "Programming",
       desc: "From high-level languages down to assembly, used across my thesis and team projects.",
-      skills: ["Java", "C++", "Kotlin", "Python", "Assembly", "SQL", "Git"],
-      used: [["Prototype Hybrid Scheduler", "#proj-thesis"], ["Team projects", "#projects"]]
+      skills: ["Java", "C++", "Kotlin", "Python", "PowerShell", "Assembly", "SQL", "Git"],
+      used: [["Prototype Hybrid Scheduler", "#proj-thesis"], ["WinPkgScan", "#proj-winpkgscan"], ["Team projects", "#projects"]]
     },
     media: {
       ref: "Y1", tab: "Media", title: "Media & office tools",
@@ -187,9 +187,9 @@
   run();
 
   /* ---------- Project filter ---------- */
-  var FILTERS = ["All", "Python", "App", "Game", "Systems", "QA"];
+  var FILTERS = ["All", "QA", "PowerShell", "Python", "App", "Game", "Systems"];
   var fBox = document.getElementById("projFilter");
-  var items = document.querySelectorAll("#projList li");
+  var items = document.querySelectorAll("#projList > li");
   FILTERS.forEach(function (f, n) {
     var b = document.createElement("button");
     b.type = "button"; b.textContent = f;

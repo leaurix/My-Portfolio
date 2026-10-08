@@ -233,7 +233,7 @@
     <div class="wrap block-head">
       <div>
         <h2 class="title">Projects</h2>
-        <p class="intro">My thesis, plus team projects where I worked as developer, artist and tester.</p>
+        <p class="intro">My thesis, an open-source Windows tool I build and test myself, and team projects where I worked as developer, artist and tester.</p>
       </div>
       <div>
         <article class="thesis" id="proj-thesis">
@@ -257,6 +257,25 @@
 
         <div class="filter" id="projFilter" role="group" aria-label="Filter projects"></div>
         <ul class="projects" id="projList">
+          <li class="feature" id="proj-winpkgscan" data-tags="PowerShell QA">
+            <p class="thesis-role">Solo project, open source</p>
+            <h3>WinPkgScan</h3>
+            <p>A Windows tool that finds leftover Microsoft Store app folders in <code>AppData\Local\Packages</code>, the ones left behind after an app is uninstalled, and removes only the ones you choose.</p>
+            <ol class="flow" aria-label="How WinPkgScan works">
+              <li><b>Scan</b><span>Read-only. Saves text, CSV and sortable HTML reports.</span></li>
+              <li><b>Review</b><span>Mark the folders to remove in the CSV.</span></li>
+              <li><b>Preview</b><span><code>-WhatIf</code> shows what would change.</span></li>
+              <li><b>Remove</b><span>Recycle Bin by default, asks before each folder.</span></li>
+              <li><b>Undo</b><span>Restore from the Recycle Bin. Every action is logged.</span></li>
+            </ol>
+            <ul class="feature-points">
+              <li>Re-checks every folder just before removal and skips links, Windows components, apps still installed and anything changed in the last 30 days.</li>
+              <li>Pester unit tests run against a mocked package list and a fake Packages folder; Windows integration tests cover the Recycle Bin and batch files.</li>
+              <li>GitHub Actions CI lints with PSScriptAnalyzer, tests on Windows PowerShell 5.1 and PowerShell 7, and publishes releases with a SHA256 checksum.</li>
+            </ul>
+            <p class="stack"><b>Stack:</b> PowerShell, Pester, PSScriptAnalyzer, GitHub Actions</p>
+            <p class="proj-meta"><span class="badge">MIT licence</span><a href="https://github.com/leaurix/WinPkgScan" target="_blank" rel="noopener">View on GitHub</a><a href="https://github.com/leaurix/WinPkgScan/releases/latest" target="_blank" rel="noopener">Download latest release</a></p>
+          </li>
           <li data-tags="Python Game Firebase">
             <h3>Dumpster Dash</h3>
             <p>2D waste-sorting game with a real-time leaderboard.</p>
